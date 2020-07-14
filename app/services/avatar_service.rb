@@ -1,8 +1,7 @@
 class AvatarService
 
   def members_of_nation(nation)
-    require 'pry'; binding.pry
-    response = conn.get("/api/v1/characters?affiliation=#{nation}")
+    response = conn.get("/api/v1/characters?affiliation=#{nation} + #{name}")
     parsed_response = JSON.parse(response.body, symbolize_names: true)
   end
 
